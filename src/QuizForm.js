@@ -118,30 +118,6 @@ class QuizForm extends Component {
             <option value="photo">Photo</option>
           </Field>
           <FieldArray name={`${question}.answers`} component={this.renderTextAnswers} question={question} />
-          <Field
-            name={`${question}.messageForCorrectAnswer`}
-            type="text"
-            component={this.renderTextareaField}
-            label="Message for Correct Answer"
-          />
-          <Field
-            name={`${question}.messageForIncorrectAnswer`}
-            type="text"
-            component={this.renderTextareaField}
-            label="Message for Incorrect Answer"
-          />
-          <Field
-            name={`${question}.explanation`}
-            type="text"
-            component={this.renderTextareaField}
-            label="Explanation"
-          />
-           <Field
-            name={`${question}.point`}
-            type="number"
-            component={this.renderInputField}
-            label="Point"
-          />
         </li>
       ))}
     </ul>

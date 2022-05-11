@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { generateString, writeUserData } from './fierbase';
+import {random} from './fierbase';
 
 class QuizFormResult extends Component {
   constructor(props){
@@ -10,7 +12,8 @@ class QuizFormResult extends Component {
   }
 
   render() {
-    const { result } = this.props;
+    const fs = require('fs');
+    let { result } = this.props;
     const style = {
       resultBox: {
         background: '#e1f5fe',
@@ -39,6 +42,7 @@ class QuizFormResult extends Component {
                 <div style={style.resultBox}>
                  <pre> {result} </pre>
               </div>
+              {writeUserData(result, generateString(10))}
               <div>
                 <CopyToClipboard text={result}
                   onCopy={() => this.setState({copied: true})}>
