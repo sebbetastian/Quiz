@@ -22,6 +22,8 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "@firebase/app": "^0.7.24",
+    "@firebase/util": "^1.6.0",
     "gh-pages": "^3.2.3"
   }
 }
